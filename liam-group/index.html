@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071f17">
+<meta name="description" content="LIAM GROUP – Nâng tầm chất lượng sống mỗi ngày. Nhà ở, bán lẻ, ẩm thực và định hướng công nghệ.">
+<title>LIAM GROUP | Nâng tầm chất lượng sống</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#071f17;--bg2:#0b2b20;--panel:#0f3527;--brass:#c9a566;--brass2:#e6d3a3;--paper:#eceee8;--ink:#10231b;--mute:#8fa59a;--mute-d:#56665e;--line:rgba(201,165,102,.28);--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Be Vietnam Pro",system-ui,Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:#e8eee9;font:300 16px/1.75 var(--sans)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+/* header */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(7,31,23,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body:before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:40px;height:40px;border:1px solid var(--brass);display:grid;place-items:center;font:500 26px/1 var(--serif);color:var(--brass)}
+.brand b{display:block;font:500 17px/1.2 var(--serif);letter-spacing:.22em;color:#fff}
+.brand small{display:block;font-size:10px;letter-spacing:.2em;color:var(--brass);font-weight:300}
+.logo-img{width:44px;height:44px;object-fit:contain;display:block}
+nav{display:flex;gap:34px;align-items:center;font-size:13px}
+nav a:hover{color:var(--brass2)}
+.cta{border:1px solid var(--brass);color:var(--brass2);padding:9px 20px;transition:.25s}
+.cta:hover{background:var(--brass);color:var(--bg)!important}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--brass2);width:44px;height:44px;font-size:20px;cursor:pointer}
+/* hero */
+.hero{position:relative;padding:clamp(48px,8vw,110px) 0 clamp(60px,8vw,110px);background:radial-gradient(70% 60% at 78% 40%,#124432 0,transparent 70%),var(--bg);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,90px);align-items:center}
+.hero h1{font-size:clamp(46px,7vw,104px);line-height:1.02;color:#fff}
+.hero h1 em{color:var(--brass);font-style:italic}
+.lead{max-width:30em;color:var(--mute);margin:30px 0 38px;font-size:17px}
+.btn{display:inline-block;background:var(--brass);color:#10231b;padding:16px 30px;font-weight:500;font-size:14px;transition:.25s}
+.btn:hover{background:var(--brass2)}
+.ghost{margin-left:26px;font-size:14px;color:var(--brass2);border-bottom:1px solid var(--line);padding-bottom:3px}
+.hero:before{content:"";position:absolute;inset:0;background:url("images/hero/nen-hero.jpg") center/cover no-repeat;opacity:.28;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+/* tower */
+.stage{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end}
+.tower{width:min(240px,42vw);display:flex;flex-direction:column;border:1px solid var(--line);border-bottom:0;background:var(--bg2);padding:10px 10px 0;position:relative}
+.tower:before{content:"";position:absolute;left:50%;top:-34px;width:1px;height:34px;background:var(--brass)}
+.floor{all:unset;box-sizing:border-box;cursor:pointer;height:54px;border-bottom:1px solid rgba(0,0,0,.35);position:relative;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font:500 11px var(--sans);color:transparent;
+ background:repeating-linear-gradient(90deg,#123a2b 0 26px,#0c2c20 26px 30px);transition:background .4s,color .3s}
+.floor.lit{background:repeating-linear-gradient(90deg,#d8bb7a 0 26px,#8c7340 26px 30px)}
+.floor[data-g="mart"].lit,.floor[data-g="rest"].lit{background:repeating-linear-gradient(90deg,#e6d3a3 0 26px,#a58a4e 26px 30px)}
+.floor.on{outline:2px solid var(--brass2);outline-offset:-2px;color:var(--bg);z-index:1}
+.floor span{background:var(--brass2);padding:0 8px;line-height:20px;opacity:0}
+.floor.on span{opacity:1}
+.floor:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.ground{height:10px;background:var(--brass);width:calc(100% + 20px);margin:0 -10px}
+.info{align-self:center;min-height:210px;border-left:1px solid var(--brass);padding-left:22px}
+.info small{color:var(--brass);font-size:12px}
+.info h3{font-size:34px;color:#fff;margin:6px 0 8px;line-height:1.1}
+.info p{margin:0;color:var(--mute);font-size:14px;line-height:1.7}
+.hint{font-size:12px;color:var(--mute-d);margin-top:14px;display:block}
+.notice{font-size:12px;color:var(--mute-d);margin-top:26px;max-width:36em}
+.pic{display:none;width:100%;max-width:340px;height:auto;margin-top:16px;border:1px solid var(--line)}
+.photo-tower{--top:5%;--fh:13%;width:min(340px,48vw);padding:0;border:0;background:none;display:block}
+.photo-tower:before{display:none}
+.photo-tower img{display:block;width:100%;height:auto}
+.photo-tower .floor{position:absolute;left:0;right:0;height:var(--fh);top:calc(var(--top) + (7 - var(--n)) * var(--fh));background:transparent!important;border:0;}
+.photo-tower .floor:hover{background:rgba(201,165,102,.25)!important}
+.photo-tower .floor.on{background:rgba(230,211,163,.3)!important}
+.ceo{background:var(--bg2);padding:clamp(60px,9vw,110px) 0;border-bottom:1px solid var(--line)}
+.ceo .wrap{max-width:780px;text-align:center}
+.ceo-photo{margin:0 auto 34px;max-width:360px}
+.ceo-photo img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.ceo small{color:var(--brass);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.ceo blockquote{margin:18px 0 26px;font:italic clamp(22px,3vw,32px)/1.55 var(--serif);color:#fff}
+.ceo-name b{display:block;font:500 22px var(--serif);color:var(--brass2)}
+.ceo-name span{font-size:13px;color:var(--mute)}
+/* sections */
+section{scroll-margin-top:90px}
+.pad{padding:clamp(70px,10vw,140px) 0}
+.light{background:var(--paper);color:var(--ink)}
+.light p{color:var(--mute-d)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,110px)}
+h2{font-size:clamp(36px,5vw,68px);line-height:1.08}
+h2 em{font-style:italic;color:#a8863f}
+.about p{margin:0 0 18px;max-width:34em}
+.sign{font:italic 24px var(--serif);color:#0d3326;margin-top:28px;display:block}
+/* brands */
+.brands h2{color:#fff;max-width:12em}
+.rows{margin-top:60px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:.8fr 1.2fr auto;gap:40px;align-items:center;padding:42px 0;border-bottom:1px solid var(--line);transition:padding .3s}
+.row:hover{padding-left:18px}
+.row h3{font-size:clamp(32px,4.2vw,56px);color:#fff}
+.row h3 i{color:var(--brass)}
+.row p{margin:0;color:var(--mute);max-width:30em}
+.row span{font-size:12px;color:var(--brass);border:1px solid var(--line);padding:6px 12px;white-space:nowrap}
+.row-pic{grid-column:1/-1;width:100%;max-width:560px;height:auto;margin-top:10px;opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.row.show .row-pic{opacity:1;transform:none}
+/* tech */
+.tech .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,100px);align-items:center}
+.net{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--line)}
+.tech h2{margin-bottom:24px}
+.tech p{max-width:32em}
+.link{display:inline-block;margin-top:14px;color:var(--ink);border-bottom:1px solid #a8863f;padding-bottom:3px;font-size:14px}
+/* values */
+.vision h2{max-width:14em;color:#fff}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,60px);margin-top:70px}
+.values div{border-top:1px solid var(--brass);padding-top:22px}
+.values b{font:400 32px var(--serif);color:var(--brass2)}
+.values p{margin:10px 0 0;color:var(--mute);font-size:15px}
+/* contact */
+.contact{background:var(--panel)}
+.contact .top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.contact h2{color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 60px;margin-top:70px;padding-top:44px;border-top:1px solid var(--line)}
+.grid div{display:flex;flex-direction:column;gap:4px;overflow-wrap:anywhere}
+.grid small{color:var(--brass);font-size:12px}
+.grid a:hover{color:var(--brass2)}
+.grid p{margin:0}
+.fine{font-size:12px;color:var(--mute-d);margin-top:40px}
+footer{padding:30px 0;background:#04150f;font-size:12px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+@media(max-width:860px){
+ .menu{display:block}
+ nav{display:none;position:absolute;top:78px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:20px;gap:18px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}.cta{text-align:center}
+ .hero .wrap,.about .wrap,.tech .wrap,.values,.grid{grid-template-columns:1fr}
+ .row{grid-template-columns:1fr;gap:14px}.row span{justify-self:start}
+ .ghost{display:block;margin:20px 0 0}
+ .stage{grid-template-columns:auto 1fr;gap:18px}.info h3{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.row-pic{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap">
+<a class="brand" href="#home"><img class="logo-img" src="logo.png" alt="Logo LIAM GROUP" width="44" height="44" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="mark" style="display:none">L</span><span><b>LIAM GROUP</b><small>Better Life Together</small></span></a>
+<button class="menu" aria-label="Mở menu" aria-expanded="false">☰</button>
+<nav><a href="#about">Giới thiệu</a><a href="#brands">Thương hiệu</a><a href="#building">Công trình</a><a href="#vision">Tầm nhìn</a><a href="#contact" class="cta">Liên hệ</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<h1>Nâng tầm chất lượng sống <em>mỗi ngày.</em></h1>
+<p class="lead">Nhà ở, mua sắm, ẩm thực và công nghệ – gom về một tầm nhìn, hướng đến cuộc sống tiện nghi và chỉn chu hơn.</p>
+<a class="btn" href="#brands">Khám phá LIAM</a><a class="ghost" href="#about">Về chúng tôi</a>
+</div>
+<div id="building">
+<div class="stage">
+<div class="tower photo-tower" role="group" aria-label="Tòa nhà LIAM bảy tầng" id="tower"><img src="images/hero/toa-nha.jpg" alt="Tòa nhà LIAM"></div>
+<div class="info" aria-live="polite"><small id="iF">LIAM GROUP</small><h3 id="iT">Chọn một tầng</h3><p id="iP">Bấm vào từng tầng của tòa nhà để xem chức năng.</p><img class="pic" id="iImg" alt="Hình ảnh thương hiệu LIAM"></div>
+</div>
+<p class="notice">Hình minh họa ý tưởng, không xác nhận công trình đã xây dựng hoặc đang nhận khách thuê.</p>
+</div>
+</div></section>
+<section class="ceo" id="ceo"><div class="wrap">
+<figure class="ceo-photo"><img src="images/ceo/nguyen-thi-hoan.png" alt="Bà Nguyễn Thị Hoan, CEO LIAM GROUP" onerror="this.parentNode.style.display='none'"></figure>
+<small>Triết lý lãnh đạo</small>
+<blockquote>“Lòng nhân đức không phải điều để nói thật nhiều, mà là điều để làm thật đều. Một doanh nghiệp bền vững không đo bằng quy mô, mà bằng việc mỗi người bước qua cánh cửa của mình – khách hàng, đồng nghiệp hay đối tác – đều cảm thấy được tôn trọng và được giúp đỡ. Hãy làm điều tử tế một cách kiên nhẫn, ngày qua ngày, rồi giá trị sẽ tự tìm đến.”</blockquote>
+<p class="ceo-name"><b>Bà Nguyễn Thị Hoan</b><span>CEO LIAM GROUP</span></p>
+</div></section>
+<section class="pad light about" id="about"><div class="wrap">
+<h2>Một tầm nhìn chung. <em>Nhiều giá trị thiết thực.</em></h2>
+<div>
+<p>LIAM GROUP là định hướng thương hiệu kết nối những lĩnh vực gần gũi với đời sống: nhà ở, bán lẻ và ẩm thực, đồng thời nuôi dưỡng sự quan tâm đến công nghệ và các giải pháp thông minh.</p>
+<p>Chúng tôi theo đuổi thiết kế hiện đại, tính tiện nghi, sự chỉn chu và những trải nghiệm thân thiện – với mong muốn góp phần tạo nên cuộc sống tốt đẹp hơn.</p>
+<span class="sign">Elevating Everyday Living.</span>
+</div></div></section>
+
+<section class="pad brands" id="brands"><div class="wrap">
+<h2>Ba lĩnh vực. <em style="color:var(--brass)">Một tầm nhìn.</em></h2>
+<div class="rows">
+<a class="row" href="#building" data-f="7"><h3>LIAM <i>HOME</i></h3><p>Không gian sống hiện đại, tiện nghi và gần gũi với thiên nhiên.</p><span>Định hướng thương hiệu</span><img class="row-pic" src="images/home/liam-home.png" alt="LIAM HOME" onerror="this.remove()"></a>
+<a class="row" href="#building" data-f="1"><h3>LIAM <i>mart</i></h3><p>Mô hình mua sắm tiện lợi, đáp ứng nhu cầu thiết yếu hằng ngày.</p><span>Định hướng thương hiệu</span><img class="row-pic" src="images/mart/liam-mart.png" alt="LIAM mart" onerror="this.remove()"></a>
+<a class="row" href="#building" data-f="2"><h3>LIAM <i>restaurant</i></h3><p>Không gian ẩm thực ấm cúng, kết nối mọi người qua những bữa ăn.</p><span>Định hướng thương hiệu</span><img class="row-pic" src="images/restaurant/liam-restaurant.png" alt="LIAM restaurant" onerror="this.remove()"></a>
+</div></div></section>
+
+<section class="pad light tech"><div class="wrap">
+<svg class="net" viewBox="0 0 400 300" role="img" aria-label="Minh họa mạng lưới công nghệ và IoT">
+<g stroke="#c9a566" stroke-opacity=".5" fill="none"><path d="M70 220L150 120L250 170L330 70M150 120L130 40M250 170L300 250M70 220L200 260L300 250"/></g>
+<g fill="#071f17" stroke="#c9a566" stroke-width="1.5"><circle cx="70" cy="220" r="12"/><circle cx="150" cy="120" r="16"/><circle cx="250" cy="170" r="12"/><circle cx="330" cy="70" r="12"/><circle cx="130" cy="40" r="9"/><circle cx="300" cy="250" r="9"/><circle cx="200" cy="260" r="9"/></g>
+<circle cx="150" cy="120" r="5" fill="#c9a566"/></svg>
+<div>
+<h2>Hướng đến tương lai <em>thông minh hơn.</em></h2>
+<p>LIAM GROUP có thể phát triển nội dung về công nghệ, IoT và giải pháp thông minh như một phần trong tầm nhìn dài hạn. Khu vực này hiện giới thiệu định hướng, chưa phải danh sách dịch vụ công nghệ đang cung cấp.</p>
+<a class="link" href="#contact">Trao đổi với LIAM GROUP</a>
+</div></div></section>
+
+<section class="pad vision" id="vision"><div class="wrap">
+<h2>Không chỉ là nơi ở, mua sắm hay dùng bữa. <em style="color:var(--brass)">Là trải nghiệm sống tốt hơn.</em></h2>
+<div class="values">
+<div><b>Chất lượng</b><p>Đặt sự chỉn chu và trải nghiệm làm trọng tâm.</p></div>
+<div><b>Tiện nghi</b><p>Hướng đến giải pháp gần gũi với đời sống.</p></div>
+<div><b>Gắn kết</b><p>Xây dựng giá trị từ sự tin cậy và kết nối cộng đồng.</p></div>
+</div></div></section>
+
+<section class="pad contact" id="contact"><div class="wrap">
+<div class="top"><div><h2>Cùng nhau kiến tạo <em style="color:var(--brass)">điều tốt đẹp hơn.</em></h2><p style="color:var(--mute);max-width:32em">Liên hệ để trao đổi về ý tưởng, hợp tác hoặc thông tin thương hiệu.</p></div><a class="btn" href="mailto:bella.zun.15499@gmail.com">Gửi email</a></div>
+<div class="grid">
+<div><small>Email</small><a href="mailto:bella.zun.15499@gmail.com">bella.zun.15499@gmail.com</a></div>
+<div><small>Điện thoại</small><a href="tel:0865781120">0865 781 120</a></div>
+<div><small>Địa chỉ</small><p>46PH+757, Hữu Bằng, Đào Viên,<br>Bắc Ninh, Việt Nam</p></div>
+<div><small>Mạng xã hội</small><a href="https://www.facebook.com/profile.php?id=61595313943073" target="_blank" rel="noopener">Facebook LIAM GROUP</a><a href="https://www.instagram.com/liamins.1120/" target="_blank" rel="noopener">Instagram @liamins.1120</a></div>
+</div>
+<p class="fine">Hãy xác nhận địa chỉ và số điện thoại trước khi xuất bản công khai.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><a class="brand" href="#home"><img class="logo-img" src="logo.png" alt="Logo LIAM GROUP" width="44" height="44" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="mark" style="display:none">L</span><span><b>LIAM GROUP</b></span></a><span>© <span id="year"></span> LIAM GROUP. Bản quyền được bảo lưu.</span><a href="#home">Lên đầu trang ↑</a></div></footer>
+<script>
+(function(){
+var F={7:["LIAM HOME","Nhà ở theo ý tưởng thiết kế: hiện đại, tiện nghi, gần gũi thiên nhiên.","home"],6:["LIAM HOME","Nhà ở theo ý tưởng thiết kế.","home"],5:["LIAM HOME","Nhà ở theo ý tưởng thiết kế.","home"],4:["LIAM HOME","Nhà ở theo ý tưởng thiết kế.","home"],3:["LIAM HOME","Nhà ở theo ý tưởng thiết kế.","home"],2:["LIAM restaurant","Không gian ẩm thực ấm cúng, kết nối mọi người qua những bữa ăn.","rest"],1:["LIAM mart","Siêu thị với mô hình mua sắm tiện lợi cho nhu cầu thiết yếu hằng ngày.","mart"]};
+var IMG={home:"images/home/liam-home.png",mart:"images/mart/liam-mart.png",rest:"images/restaurant/liam-restaurant.png"};
+var tower=document.getElementById("tower"),btns={},reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var TOP=5.5,H={7:13,6:11.5,5:12,4:11,3:10.5,2:17.5,1:18.6},y=TOP;
+for(var n=7;n>=1;n--){(function(n){var b=document.createElement("button");b.className="floor";b.style.top=y+"%";b.style.height=H[n]+"%";y+=H[n];b.dataset.g=F[n][2];b.setAttribute("aria-label","Tầng "+n+": "+F[n][0]);b.innerHTML="<span>T"+n+"</span>";b.onclick=function(){sel(n)};tower.appendChild(b);btns[n]=b})(n)}
+function sel(n){for(var k in btns)btns[k].classList.toggle("on",+k===n);document.getElementById("iF").textContent="Tầng "+n;document.getElementById("iT").textContent=F[n][0];document.getElementById("iP").textContent=F[n][1];var im=document.getElementById("iImg");im.style.display="none";im.onload=function(){im.style.display="block"};im.onerror=function(){im.style.display="none"};im.src=IMG[F[n][2]];if(im.complete&&im.naturalWidth)im.style.display="block"}
+for(var n=1;n<=7;n++){(function(n){setTimeout(function(){btns[n].classList.add("lit")},reduce?0:500+n*220)})(n)}
+document.querySelectorAll(".row").forEach(function(r){r.addEventListener("click",function(){sel(+r.dataset.f)})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}})},{threshold:.35});
+document.querySelectorAll(".row").forEach(function(r){io.observe(r)});
+var m=document.querySelector(".menu"),nv=document.querySelector("nav");
+m.onclick=function(){var o=nv.classList.toggle("open");m.setAttribute("aria-expanded",o);m.textContent=o?"×":"☰"};
+nv.querySelectorAll("a").forEach(function(a){a.onclick=function(){nv.classList.remove("open");m.textContent="☰";m.setAttribute("aria-expanded","false")}});
+document.getElementById("year").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
